@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблица с фильтром</title>
+<style>
+
+
+
+
+  table {
+    border: 1px solid green;
+    margin: auto;
+  }
+  tr {
+    padding: 0px;
+  }
+
+  td {
+    height: 100%;
+    padding: 0px;
+    overflow: hidden
+  }
+
+  td a {
+    margin: -1em;
+    padding: 1em;
+    display: block;
+  }
+
+  td a.five:hover {
+    background-color: rgba(255,0,0,0.5);
+  }
+  
+  a.five {
+    background-color: rgba(255,0,0,0.3);
+  }
+  
+    td a.four:hover {
+    background-color: rgba(11,156,49,0.6);
+  }
+  
+  a.four {
+    background-color: rgba(11,156,49,0.4);
+  }
+
+  td,
+  th {
+    width: 150px;
+    border: 1px solid #c0c0c0;
+    padding: 8px;
+  }
+
+  
+  a {
+    text-align: center;
+  }
+
+
+
+  a:link {
+        color: gray;
+    text-decoration: none;
+  }
+
+  a:visited {
+        color: gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+       color: gray;
+    text-decoration: none;
+  }
+
+  a:active {
+        color: gray;
+    text-decoration: none;
+  }
+      .hidden {
+      visibility: hidden;
+    }
+</style>
+</head>
+<body>
+  <label>
+    <input type="checkbox" id="five_box"> 5 кю
+  </label>
+  <label>
+    <input type="checkbox" id="four_box"> 4 кю
+  </label>
+<table id="myTable">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Шомен учи</th>
+      <th>Коса дори</th>
+      <th>Катата дори</th>
+      <th>Ката дори</th>
+      <th>Екомен учи</th>
+      <th>Риоте дори</th>
+      <th>Мороте дори</th>
+      <th>Уширо риоте доори</th>
+      <th>Риоте доори</th>
+    </tr>
+  </thead>
+  <tr> 
+    <td rowspan="3">Икке</td>
+    <td>
+      <a class=five href="https://www.youtube.com/watch?v=hJqD8MRvu_Q">t</a>
+    </td>
+    <td><a class=five href="https://www.youtube.com/watch?v=ACLpws5FPfE">t</a></td>
+    <td><a class=four href="https://www.youtube.com/watch?v=UlTCM-iXxYc">t</a></td>
+	<td><a class=five href="https://www.youtube.com/watch?v=GejFVv7cA3Q">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr> 
+    <td>
+      <a class=five href="https://www.youtube.com/watch?v=ZnrTqbU2WBk">s</a>
+    </td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a class=five href="https://www.youtube.com/watch?v=ho3n2or_oXs">s</a></td>
+	<td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+  </tr>
+  <tr> 
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr> 
+    <td rowspan="3">Никке</td>
+    <td>
+      <a class=five href="https://www.youtube.com/watch?v=nL6tYophzeQ">t</a>
+    </td>
+	<td><a class=four href="https://www.youtube.com/watch?v=6r5mjH4gfAE">t</a></td>
+	<td><a class=four href="https://www.youtube.com/watch?v=KbGHgBfCDyE">t</a></td>
+	<td><a class=four href="https://www.youtube.com/watch?v=8VG2DQqOab8">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr> 
+    <td><a class=four href="https://www.youtube.com/watch?v=LLRQKTwC2_M">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a class=four href="https://www.youtube.com/watch?v=Y489WI9YCeU">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr> 
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr> 
+    <td rowspan="3">Санке</td>
+	<td><a class=four href="https://www.youtube.com/watch?v=_hkkzPOLLAI">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr> 
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr> 
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr> 
+    <td rowspan="3">Енке</td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr> 
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr> 
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr> 
+    <td rowspan="3">Гоке</td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr>
+    <td rowspan="3">Ирими наге</td>
+    <td><a class=five href="https://www.youtube.com/watch?v=xgH1q3KykZ0">t</a></td>
+    <td><a class=five href="https://www.youtube.com/watch?v=5Pq5quVgWv0">t</a></td>
+	<td><a class=four href="https://www.youtube.com/watch?v=4MAGaUrlypA">t</a></td>    
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr>
+    <td rowspan="3">Коте гаеши</td>
+    <td><a href="youtube">t</a></td>
+    <td><a href="youtube">t</a></td>
+    <td><a class=five href="https://www.youtube.com/watch?v=EC5SgWWIDCM">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr>
+    <td rowspan="3">Шихо наге</td>
+    <td><a href="youtube">t</a></td>
+    <td><a class=five href="https://www.youtube.com/watch?v=2iKjb9DyrRg">t</a></td>
+    <td><a class=five href="https://www.youtube.com/watch?v=TrU5CG1YXQ0">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+  <tr>
+    <td rowspan="3">Тэнчин наге</td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+    <tr>
+    <td rowspan="3">Кайтен наге</td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+    <tr>
+    <td rowspan="3">Кокю хо</td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+	<td><a href="youtube">t</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a class=five href="https://www.youtube.com/watch?v=otmLsetAf8w">s</a></td>
+	<td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+    <td><a href="youtube">s</a></td>
+  </tr>
+  <tr>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+    <td><a href="youtube">hh</a></td>
+  </tr>
+</table>
+
+
+  <script>
+	document.getElementById('five_box').addEventListener('change', function () {
+	  var videoLessons = document.querySelectorAll('#myTable td a');
+	  videoLessons.forEach(function (lesson) {
+		var isFive = lesson.classList.contains('five');
+		lesson.parentNode.classList.toggle('hidden', document.getElementById('five_box').checked && !isFive);
+	  });
+	});
+	
+	document.getElementById('four_box').addEventListener('change', function () {
+	  var videoLessons = document.querySelectorAll('#myTable td a');
+	  videoLessons.forEach(function (lesson) {
+	    var isFive = lesson.classList.contains('five');
+		var isFour = lesson.classList.contains('four');
+		lesson.parentNode.classList.toggle('hidden', document.getElementById('four_box').checked && !isFour && !isFive);
+	  });
+	});
+  </script>
+</body>
+</html>
