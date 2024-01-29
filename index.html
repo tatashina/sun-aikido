@@ -57,6 +57,14 @@
       a.two {
         background-color: rgba(139, 69, 19, 0.6);
       }
+	  
+	  td a.one:hover {
+        background-color: rgba(83, 42, 13, 0.9);
+      }
+
+      a.one {
+        background-color: rgba(83, 42, 13, 0.7);
+      }
 
       td,
       th {
@@ -98,26 +106,25 @@
         opacity: 0.5;
         pointer-events: none;
       }
+	  
+	  .tight {
+		width: 70px;
+	  }
     </style>
   </head>
   <body>
-    <label>
-      <input type="checkbox" id="five_box"> 5 кю </label>
-    <label>
-      <label>
-        <input type="checkbox" id="four_box"> 4 кю </label>
-      <label>
-        <label>
-          <input type="checkbox" id="three_box"> 3 кю </label>
-        <label>
-          <input type="checkbox" id="two_box"> 2 кю </label>
+    <label><input type="checkbox" id="five_box"> 5 кю </label>
+    <label><input type="checkbox" id="four_box"> 4 кю </label>
+    <label><input type="checkbox" id="three_box"> 3 кю </label>
+    <label><input type="checkbox" id="two_box"> 2 кю </label>
+	<label><input type="checkbox" id="one_box"> 1 кю </label>
         <table id="myTable">
           <thead>
             <tr>
               <th></th>
               <th>Шомен учи</th>
               <th>Коса дори</th>
-              <th>Катата дори</th>
+              <th colspan="2">Катата дори</th>
               <th>Ката дори</th>
               <th>Екомен учи</th>
               <th>Риоте дори</th>
@@ -134,7 +141,7 @@
             <td>
               <a class=five href="https://www.youtube.com/watch?v=ACLpws5FPfE">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=four href="https://www.youtube.com/watch?v=UlTCM-iXxYc">t</a>
             </td>
             <td>
@@ -163,7 +170,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -187,12 +194,12 @@
           </tr>
           <tr>
             <td>
-              <a href="youtube">hh</a>
+              <a class=one href="https://www.youtube.com/watch?v=rp29KlQ3pIY">hh</a>
             </td>
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -222,7 +229,7 @@
             <td>
               <a class=four href="https://www.youtube.com/watch?v=6r5mjH4gfAE">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=four href="https://www.youtube.com/watch?v=KbGHgBfCDyE">t</a>
             </td>
             <td>
@@ -251,7 +258,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -275,12 +282,12 @@
           </tr>
           <tr>
             <td>
-              <a href="youtube">hh</a>
+              <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=31">hh</a>
             </td>
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -310,7 +317,7 @@
             <td>
               <a class=three href="https://youtu.be/byQ3q73MPcM">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=three href="https://www.youtube.com/watch?v=eswGN3Q_ynw">t</a>
             </td>
             <td>
@@ -339,7 +346,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -363,12 +370,12 @@
           </tr>
           <tr>
             <td>
-              <a href="youtube">hh</a>
+              <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=56">hh</a>
             </td>
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -398,7 +405,7 @@
             <td>
               <a class=three href="https://www.youtube.com/watch?v=bApC3Dnj_6g">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=three href="https://www.youtube.com/watch?v=g5XrqPaCs1A">t</a>
             </td>
             <td>
@@ -427,7 +434,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -451,12 +458,12 @@
           </tr>
           <tr>
             <td>
-              <a href="youtube">hh</a>
+              <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=79">hh</a>
             </td>
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -486,7 +493,7 @@
             <td>
               <a href="youtube">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">t</a>
             </td>
             <td>
@@ -515,7 +522,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -544,7 +551,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -574,7 +581,7 @@
             <td>
               <a class=five href="https://www.youtube.com/watch?v=5Pq5quVgWv0">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=four href="https://www.youtube.com/watch?v=4MAGaUrlypA">t</a>
             </td>
             <td>
@@ -603,7 +610,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -632,7 +639,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -662,7 +669,7 @@
             <td>
               <a href="youtube">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=five href="https://www.youtube.com/watch?v=EC5SgWWIDCM">t</a>
             </td>
             <td>
@@ -691,7 +698,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -720,7 +727,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -750,7 +757,7 @@
             <td>
               <a class=five href="https://www.youtube.com/watch?v=2iKjb9DyrRg">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=five href="https://www.youtube.com/watch?v=TrU5CG1YXQ0">t</a>
             </td>
             <td>
@@ -779,7 +786,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -808,7 +815,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=four href="https://www.youtube.com/watch?v=aeNlXCk8U_Q">hh</a>
             </td>
             <td>
@@ -838,7 +845,7 @@
             <td>
               <a href="youtube">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">t</a>
             </td>
             <td>
@@ -867,7 +874,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -896,7 +903,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -926,11 +933,11 @@
             <td>
               <a class="five ua" href="youtube">t</a>
             </td>
-            <td>
+            <td class="tight">
               <a class="three" href="https://www.youtube.com/watch?v=1VOJYHPCnf0">t (учи) </a>
             </td>
-            <td>
-              <a href="youtube">t</a>
+			<td class="tight">
+              <a class="two" href="https://www.youtube.com/watch?v=2pSTa5uuoUg">t (сото) </a>
             </td>
             <td>
               <a href="youtube">t</a>
@@ -943,6 +950,9 @@
             </td>
             <td>
               <a href="youtube">t</a>
+            </td>
+            <td>
+              <a class="two" href="https://www.youtube.com/watch?v=ongtI3jmSwA">t</a>
             </td>
             <td>
               <a href="youtube">t</a>
@@ -955,7 +965,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -984,7 +994,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -1014,7 +1024,7 @@
             <td>
               <a href="youtube">t</a>
             </td>
-            <td>
+            <td colspan="2">
               <a class=three href="https://www.youtube.com/watch?v=c8iHaT7zzHI">t</a>
             </td>
             <td>
@@ -1043,7 +1053,7 @@
             <td>
               <a href="youtube">s</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">s</a>
             </td>
             <td>
@@ -1072,7 +1082,7 @@
             <td>
               <a href="youtube">hh</a>
             </td>
-            <td>
+            <td colspan="2">
               <a href="youtube">hh</a>
             </td>
             <td>
@@ -1128,6 +1138,17 @@
               var isThree = lesson.classList.contains('three');
               var isTwo = lesson.classList.contains('two');
               lesson.parentNode.classList.toggle('hidden', document.getElementById('two_box').checked && !isFour && !isFive && !isThree && !isTwo);
+            });
+          });
+		  document.getElementById('one_box').addEventListener('change', function() {
+            var videoLessons = document.querySelectorAll('#myTable td a');
+            videoLessons.forEach(function(lesson) {
+              var isFive = lesson.classList.contains('five');
+              var isFour = lesson.classList.contains('four');
+              var isThree = lesson.classList.contains('three');
+              var isTwo = lesson.classList.contains('two');
+              var isOne = lesson.classList.contains('one');
+              lesson.parentNode.classList.toggle('hidden', document.getElementById('one_box').checked && !isFour && !isFive && !isThree && !isTwo && !isOne);
             });
           });
         </script>
