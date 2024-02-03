@@ -6,9 +6,13 @@
     <title>Таблица с фильтром</title>
     <style>
       table {
-        border: 1px solid green;
-        margin: auto;
-		empty-cells: hide;
+        border: 1px solid #c0c0c0;
+      }
+
+      .outerbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       tr {
@@ -58,8 +62,8 @@
       a.two {
         background-color: rgba(139, 69, 19, 0.6);
       }
-	  
-	  td a.one:hover {
+
+      td a.one:hover {
         background-color: rgba(83, 42, 13, 0.9);
       }
 
@@ -98,7 +102,15 @@
         text-decoration: none;
       }
 
+      .always-hidden {
+        visibility: hidden;
+      }
+
       .hidden {
+        visibility: hidden;
+      }
+
+      .hidden-always {
         visibility: hidden;
       }
 
@@ -107,1064 +119,1130 @@
         opacity: 0.5;
         pointer-events: none;
       }
-	  
-	  .tight {
-		width: 55px;
-	  }
-	  
-	  .qqq{ background-color:#ABCCF2; }
-	  
 
+      .tight {
+        width: 55px;
+      }
+
+      .radio-inputs {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 0.5rem;
+        background-color: #EEE;
+        box-sizing: border-box;
+        box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+        padding-bottom: 0.25rem;
+        font-size: 14px;
+      }
+
+      .radio-inputs .radio {
+        border: 1px solid #c0c0c0;
+        padding: 8px;
+        flex: 1 1 auto;
+        text-align: center;
+        width: 300px;
+        margin: 0.5px;
+      }
+
+      .radio-inputs .radio input {
+        display: none;
+      }
+
+      .radio-inputs .radio .name {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-around;
+        border: none;
+        padding: .5rem 0;
+        color: rgba(51, 65, 85, 1);
+        transition: all .15s ease-in-out;
+      }
+
+      .radio-inputs .radio input:checked+.name {
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
-    <label><input type="checkbox" id="five_box"> 5 кю </label>
-    <label><input type="checkbox" id="four_box"> 4 кю </label>
-    <label><input type="checkbox" id="three_box"> 3 кю </label>
-    <label><input type="checkbox" id="two_box"> 2 кю </label>
-	<label><input type="checkbox" id="one_box"> 1 кю </label>
-        <table id="myTable">
-          <thead>
-            <tr>
-              <th></th>
-              <th colspan="2">Шомен учи</th>
-              <th>Коса дори</th>
-              <th colspan="2">Катата дори</th>
-              <th>Ката дори</th>
-              <th>Екомен учи</th>
-              <th>Риоте дори</th>
-              <th>Мороте дори</th>
-              <th>Уширо риоте доори</th>
-              <th colspan="2">Тски</th>
-            </tr>
-          </thead>
+    <div class=outerbox>
+      <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" id="five_box" name="radio">
+          <span class="name">5 КЮ</span>
+        </label>
+        <label class="radio">
+          <input type="radio" id="four_box" name="radio">
+          <span class="name">4 КЮ</span>
+        </label>
+        <label class="radio">
+          <input id="three_box" type="radio" name="radio">
+          <span class="name">3 КЮ</span>
+        </label>
+        <label class="radio">
+          <input id="two_box" type="radio" name="radio">
+          <span class="name">2 КЮ</span>
+        </label>
+        <label class="radio">
+          <input id="one_box" type="radio" name="radio" checked="">
+          <span class="name">1 КЮ</span>
+        </label>
+      </div>
+      <table id="myTable">
+        <thead>
           <tr>
-            <td rowspan="3">Икке</td>
-            <td colspan="2">
-              <a class=five href="https://www.youtube.com/watch?v=hJqD8MRvu_Q">t</a>
-            </td>
-            <td>
-              <a class=five href="https://www.youtube.com/watch?v=ACLpws5FPfE">t</a>
-            </td>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=UlTCM-iXxYc">t</a>
-            </td>
-            <td>
-              <a class=five href="https://www.youtube.com/watch?v=GejFVv7cA3Q">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=blWvKX0yF-s">t</a>
-            </td>
-            <td>
-              <a class=two href="https://www.youtube.com/watch?v=sdaBm8Tvhxs">t</a>
-            </td>
-            <td>
-              <a class=two href="https://www.youtube.com/watch?v=tVW84BdE1SM">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=xGH7bfgoT-A">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
+            <th></th>
+            <th colspan="2">Шомен учи</th>
+            <th>Коса дори</th>
+            <th colspan="2">Катата дори</th>
+            <th>Ката дори</th>
+            <th>Екомен учи</th>
+            <th>Риоте дори</th>
+            <th>Мороте дори</th>
+            <th>Уширо риоте доори</th>
+            <th colspan="2">Тски</th>
           </tr>
-          <tr>
-            <td colspan="2">
-              <a class=five href="https://www.youtube.com/watch?v=ZnrTqbU2WBk">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a class=five href="https://www.youtube.com/watch?v=ho3n2or_oXs">s</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=a4pFbVJw-Ms">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://www.youtube.com/watch?v=rp29KlQ3pIY">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Никке</td>
-            <td colspan="2">
-              <a class=five href="https://www.youtube.com/watch?v=nL6tYophzeQ">t</a>
-            </td>
-            <td>
-              <a class=four href="https://www.youtube.com/watch?v=6r5mjH4gfAE">t</a>
-            </td>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=KbGHgBfCDyE">t</a>
-            </td>
-            <td>
-              <a class=four href="https://www.youtube.com/watch?v=8VG2DQqOab8">t</a>
-            </td>
-            <td>
-              <a class=three href="https://youtu.be/blWvKX0yF-s?list=PLYq4cfjJp5PrUxDeyiK4W3DaxY76TVqqu&t=40">t</a>
-            </td>
-            <td>
-              <a class=two href="https://youtu.be/sdaBm8Tvhxs?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=27">t</a>
-            </td>
-            <td>
-              <a class=two href="https://youtu.be/tVW84BdE1SM?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=53">t</a>
-            </td>
-            <td>
-              <a class=one href="https://youtu.be/xGH7bfgoT-A?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=30">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=LLRQKTwC2_M">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a class=four href="https://www.youtube.com/watch?v=Y489WI9YCeU">s</a>
-            </td>
-            <td>
-              <a class=one href="https://youtu.be/a4pFbVJw-Ms?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=28">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=31">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Санке</td>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=_hkkzPOLLAI">t</a>
-            </td>
-            <td>
-              <a class=three href="https://youtu.be/byQ3q73MPcM">t</a>
-            </td>
-            <td colspan="2">
-              <a class=three href="https://www.youtube.com/watch?v=eswGN3Q_ynw">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=vrMC1cbLU4M">t</a>
-            </td>
-            <td>
-              <a class=three href="https://youtu.be/blWvKX0yF-s?list=PLYq4cfjJp5PrUxDeyiK4W3DaxY76TVqqu&t=73">t</a>
-            </td>
-            <td>
-              <a class=two href="https://youtu.be/sdaBm8Tvhxs?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=54">t</a>
-            </td>
-            <td>
-              <a class=two href="https://youtu.be/tVW84BdE1SM?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=89">t</a>
-            </td>
-            <td>
-              <a class=one href="https://youtu.be/xGH7bfgoT-A?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=53">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=three href="https://www.youtube.com/watch?v=pw_PnZyL5I0">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a class=three href="https://youtu.be/ehj2hm5fNa0">s</a>
-            </td>
-            <td>
-              <a class=one href="https://youtu.be/a4pFbVJw-Ms?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=54">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=56">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Енке</td>
-            <td colspan="2">
-              <a class=three href="https://www.youtube.com/watch?v=5aPoMPW849s">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=bApC3Dnj_6g">t</a>
-            </td>
-            <td colspan="2">
-              <a class=three href="https://www.youtube.com/watch?v=g5XrqPaCs1A">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=3v-_eFp3IAw">t</a>
-            </td>
-            <td>
-              <a class=three href="https://youtu.be/blWvKX0yF-s">t</a>
-            </td>
-            <td>
-              <a class=two href="https://youtu.be/sdaBm8Tvhxs?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=83">t</a>
-            </td>
-            <td>
-              <a class=two href="https://youtu.be/tVW84BdE1SM?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=122">t</a>
-            </td>
-            <td>
-              <a class=one href="https://youtu.be/xGH7bfgoT-A?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=77">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=three href="https://www.youtube.com/watch?v=ZzlmguIgOtg">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=hKFqkmQMj-A">s</a>
-            </td>
-            <td>
-              <a class=one href="https://youtu.be/a4pFbVJw-Ms?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=78">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=79">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Гоке</td>
-            <td colspan="2">
-              <a class=two href="https://www.youtube.com/watch?v=6kOea2D_W04">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=0oQCP24eaEI">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td colspan="2">
-              <a class=one href="https://www.youtube.com/watch?v=vLB_lAJ3IkQ">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Ирими наге</td>
-            <td colspan="2">
-              <a class=five href="https://www.youtube.com/watch?v=xgH1q3KykZ0">t</a>
-            </td>
-            <td>
-              <a class=five href="https://www.youtube.com/watch?v=5Pq5quVgWv0">t</a>
-            </td>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=4MAGaUrlypA">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=w9H5rVuYJqc">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=YTIEMZv3Yn4">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=IS5b-9YFlIY">t</a>
-            </td>
-            <td>
-              <a class=two href="https://www.youtube.com/watch?v=dkMRg8PdPoU">t</a>
-            </td>
-            <td colspan="2">
-              <a class=two href="https://www.youtube.com/watch?v=BWzaS5yzqqc">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://www.youtube.com/watch?v=RPH4MZIRQVo">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Коте гаеши</td>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=VHXe3acZKh8">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=kjVEqptIuT0">t</a>
-            </td>
-            <td colspan="2">
-              <a class=five href="https://www.youtube.com/watch?v=EC5SgWWIDCM">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=5QXN-y9FOHU">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=AgwhUdcavlM">t</a>
-            </td>
-            <td>
-              <a class=two href="https://www.youtube.com/watch?v=x11QrIpOeWk">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://www.youtube.com/watch?v=T0nVCfnNabI">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a class=one href="https://www.youtube.com/watch?v=ancoNvjUFJ0">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a class=one href="https://www.youtube.com/watch?v=0oLQKTY5LZg">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Шихо наге</td>
-            <td colspan="2">
-              <a class=two href="https://www.youtube.com/watch?v=Jd1HhbJn3EI">t</a>
-            </td>
-            <td>
-              <a class=five href="https://www.youtube.com/watch?v=2iKjb9DyrRg">t</a>
-            </td>
-            <td colspan="2">
-              <a class=five href="https://www.youtube.com/watch?v=TrU5CG1YXQ0">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=four href="https://www.youtube.com/watch?v=oRFEHYF-3vM">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=crXID7uTK24">t</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=m2sABtxbM_w">t</a>
-            </td>
-            <td>
-              <a class=two href="https://www.youtube.com/watch?v=0jLQGbMEJo4">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a class=four href="https://www.youtube.com/watch?v=aeNlXCk8U_Q">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a class=one href="https://www.youtube.com/watch?v=GaBcKQ4XEfM">hh</a>
-            </td>
-            <td>
-              <a class=four href="https://www.youtube.com/watch?v=csobUjVEufI">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Тэнчин наге</td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=3wwDH0QmKc0">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Кайтен наге</td>
-            <td class="tight">
-              <a class="one" href="https://www.youtube.com/watch?v=8L2FIcYp79k">t (учи)</a>
-            </td>
-			<td class="tight">
-              <a class="one" href="https://www.youtube.com/watch?v=dsZl6CjJ644">t (сото)</a>
-            </td>
-            <td>
-              <a class="five ua" href="youtube">t</a>
-            </td>
-            <td class="tight">
-              <a class="three" href="https://www.youtube.com/watch?v=1VOJYHPCnf0">t (учи)</a>
-            </td>
-			<td class="tight">
-              <a class="two" href="https://www.youtube.com/watch?v=2pSTa5uuoUg">t (сото)</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class="two" href="https://www.youtube.com/watch?v=ongtI3jmSwA">t</a>
-            </td>
-            <td class="tight">
-              <a class="one" href="https://www.youtube.com/watch?v=T8c-_SLjtxg">t (учи)</a>
-            </td>
-			<td class="tight">
-              <a class="one" href="https://www.youtube.com/watch?v=U7Q6T2S4JOk">t (сото)</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="tight">
-              <a class="one" href="https://www.youtube.com/watch?v=zrhlbJeFYOs">hh (учи) </a>
-            </td>
-			<td class="tight">
-              <a class="one" href="https://www.youtube.com/watch?v=nMJG87_GIrI">hh (сото) </a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-          <tr>
-            <td rowspan="3">Кокю хо</td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td colspan="2">
-              <a class=three href="https://www.youtube.com/watch?v=c8iHaT7zzHI">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td>
-              <a class=three href="https://www.youtube.com/watch?v=Im2HzWEZD74">t</a>
-            </td>
-            <td>
-              <a href="youtube">t</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">t</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a class=five href="https://www.youtube.com/watch?v=otmLsetAf8w">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td>
-              <a href="youtube">s</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">s</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td>
-              <a href="youtube">hh</a>
-            </td>
-            <td colspan="2">
-              <a href="youtube">hh</a>
-            </td>
-          </tr>
-        </table>
-        <script>
-          document.getElementById('five_box').addEventListener('change', function() {
-            var videoLessons = document.querySelectorAll('#myTable td a');
-            videoLessons.forEach(function(lesson) {
-              var isFive = lesson.classList.contains('five');
-              lesson.parentNode.classList.toggle('hidden', document.getElementById('five_box').checked && !isFive);
-            });
-          });
-          document.getElementById('four_box').addEventListener('change', function() {
-            var videoLessons = document.querySelectorAll('#myTable td a');
-            videoLessons.forEach(function(lesson) {
-              var isFive = lesson.classList.contains('five');
-              var isFour = lesson.classList.contains('four');
-              lesson.parentNode.classList.toggle('hidden', document.getElementById('four_box').checked && !isFour && !isFive);
-            });
-          });
-          document.getElementById('three_box').addEventListener('change', function() {
-            var videoLessons = document.querySelectorAll('#myTable td a');
-            videoLessons.forEach(function(lesson) {
-              var isFive = lesson.classList.contains('five');
-              var isFour = lesson.classList.contains('four');
-              var isThree = lesson.classList.contains('three');
-              lesson.parentNode.classList.toggle('hidden', document.getElementById('three_box').checked && !isFour && !isFive && !isThree);
-            });
-          });
-          document.getElementById('two_box').addEventListener('change', function() {
-            var videoLessons = document.querySelectorAll('#myTable td a');
-            videoLessons.forEach(function(lesson) {
-              var isFive = lesson.classList.contains('five');
-              var isFour = lesson.classList.contains('four');
-              var isThree = lesson.classList.contains('three');
-              var isTwo = lesson.classList.contains('two');
-              lesson.parentNode.classList.toggle('hidden', document.getElementById('two_box').checked && !isFour && !isFive && !isThree && !isTwo);
-            });
-          });
-		  document.getElementById('one_box').addEventListener('change', function() {
-            var videoLessons = document.querySelectorAll('#myTable td a');
-            videoLessons.forEach(function(lesson) {
-              var isFive = lesson.classList.contains('five');
-              var isFour = lesson.classList.contains('four');
-              var isThree = lesson.classList.contains('three');
-              var isTwo = lesson.classList.contains('two');
-              var isOne = lesson.classList.contains('one');
-              lesson.parentNode.classList.toggle('hidden', document.getElementById('one_box').checked && !isFour && !isFive && !isThree && !isTwo && !isOne);
-            });
-          });
-		</script>
+        </thead>
+        <tr>
+          <td rowspan="3">Икке</td>
+          <td colspan="2">
+            <a class=five href="https://www.youtube.com/watch?v=hJqD8MRvu_Q">t</a>
+          </td>
+          <td>
+            <a class=five href="https://www.youtube.com/watch?v=ACLpws5FPfE">t</a>
+          </td>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=UlTCM-iXxYc">t</a>
+          </td>
+          <td>
+            <a class=five href="https://www.youtube.com/watch?v=GejFVv7cA3Q">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=blWvKX0yF-s">t</a>
+          </td>
+          <td>
+            <a class=two href="https://www.youtube.com/watch?v=sdaBm8Tvhxs">t</a>
+          </td>
+          <td>
+            <a class=two href="https://www.youtube.com/watch?v=tVW84BdE1SM">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=xGH7bfgoT-A">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=five href="https://www.youtube.com/watch?v=ZnrTqbU2WBk">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a class=five href="https://www.youtube.com/watch?v=ho3n2or_oXs">s</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=a4pFbVJw-Ms">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://www.youtube.com/watch?v=rp29KlQ3pIY">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Никке</td>
+          <td colspan="2">
+            <a class=five href="https://www.youtube.com/watch?v=nL6tYophzeQ">t</a>
+          </td>
+          <td>
+            <a class=four href="https://www.youtube.com/watch?v=6r5mjH4gfAE">t</a>
+          </td>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=KbGHgBfCDyE">t</a>
+          </td>
+          <td>
+            <a class=four href="https://www.youtube.com/watch?v=8VG2DQqOab8">t</a>
+          </td>
+          <td>
+            <a class=three href="https://youtu.be/blWvKX0yF-s?list=PLYq4cfjJp5PrUxDeyiK4W3DaxY76TVqqu&t=40">t</a>
+          </td>
+          <td>
+            <a class=two href="https://youtu.be/sdaBm8Tvhxs?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=27">t</a>
+          </td>
+          <td>
+            <a class=two href="https://youtu.be/tVW84BdE1SM?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=53">t</a>
+          </td>
+          <td>
+            <a class=one href="https://youtu.be/xGH7bfgoT-A?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=30">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=LLRQKTwC2_M">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a class=four href="https://www.youtube.com/watch?v=Y489WI9YCeU">s</a>
+          </td>
+          <td>
+            <a class=one href="https://youtu.be/a4pFbVJw-Ms?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=28">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=31">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Санке</td>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=_hkkzPOLLAI">t</a>
+          </td>
+          <td>
+            <a class=three href="https://youtu.be/byQ3q73MPcM">t</a>
+          </td>
+          <td colspan="2">
+            <a class=three href="https://www.youtube.com/watch?v=eswGN3Q_ynw">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=vrMC1cbLU4M">t</a>
+          </td>
+          <td>
+            <a class=three href="https://youtu.be/blWvKX0yF-s?list=PLYq4cfjJp5PrUxDeyiK4W3DaxY76TVqqu&t=73">t</a>
+          </td>
+          <td>
+            <a class=two href="https://youtu.be/sdaBm8Tvhxs?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=54">t</a>
+          </td>
+          <td>
+            <a class=two href="https://youtu.be/tVW84BdE1SM?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=89">t</a>
+          </td>
+          <td>
+            <a class=one href="https://youtu.be/xGH7bfgoT-A?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=53">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=three href="https://www.youtube.com/watch?v=pw_PnZyL5I0">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a class=three href="https://youtu.be/ehj2hm5fNa0">s</a>
+          </td>
+          <td>
+            <a class=one href="https://youtu.be/a4pFbVJw-Ms?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=54">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=56">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Енке</td>
+          <td colspan="2">
+            <a class=three href="https://www.youtube.com/watch?v=5aPoMPW849s">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=bApC3Dnj_6g">t</a>
+          </td>
+          <td colspan="2">
+            <a class=three href="https://www.youtube.com/watch?v=g5XrqPaCs1A">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=3v-_eFp3IAw">t</a>
+          </td>
+          <td>
+            <a class=three href="https://youtu.be/blWvKX0yF-s">t</a>
+          </td>
+          <td>
+            <a class=two href="https://youtu.be/sdaBm8Tvhxs?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=83">t</a>
+          </td>
+          <td>
+            <a class=two href="https://youtu.be/tVW84BdE1SM?list=PLYq4cfjJp5PqD0_oqcCysfuzgIwY8_zgM&t=122">t</a>
+          </td>
+          <td>
+            <a class=one href="https://youtu.be/xGH7bfgoT-A?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=77">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=three href="https://www.youtube.com/watch?v=ZzlmguIgOtg">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=hKFqkmQMj-A">s</a>
+          </td>
+          <td>
+            <a class=one href="https://youtu.be/a4pFbVJw-Ms?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=78">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://youtu.be/rp29KlQ3pIY?list=PLYq4cfjJp5Po3pa_2zx_RwRXcKvCI3xKR&t=79">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Гоке</td>
+          <td colspan="2">
+            <a class=two href="https://www.youtube.com/watch?v=6kOea2D_W04">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=0oQCP24eaEI">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td colspan="2">
+            <a class=one href="https://www.youtube.com/watch?v=vLB_lAJ3IkQ">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Ирими наге</td>
+          <td colspan="2">
+            <a class=five href="https://www.youtube.com/watch?v=xgH1q3KykZ0">t</a>
+          </td>
+          <td>
+            <a class=five href="https://www.youtube.com/watch?v=5Pq5quVgWv0">t</a>
+          </td>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=4MAGaUrlypA">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=w9H5rVuYJqc">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=YTIEMZv3Yn4">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=IS5b-9YFlIY">t</a>
+          </td>
+          <td>
+            <a class=two href="https://www.youtube.com/watch?v=dkMRg8PdPoU">t</a>
+          </td>
+          <td colspan="2">
+            <a class=two href="https://www.youtube.com/watch?v=BWzaS5yzqqc">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://www.youtube.com/watch?v=RPH4MZIRQVo">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Коте гаеши</td>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=VHXe3acZKh8">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=kjVEqptIuT0">t</a>
+          </td>
+          <td colspan="2">
+            <a class=five href="https://www.youtube.com/watch?v=EC5SgWWIDCM">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=5QXN-y9FOHU">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=AgwhUdcavlM">t</a>
+          </td>
+          <td>
+            <a class=two href="https://www.youtube.com/watch?v=x11QrIpOeWk">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://www.youtube.com/watch?v=T0nVCfnNabI">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class=one href="https://www.youtube.com/watch?v=ancoNvjUFJ0">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a class=one href="https://www.youtube.com/watch?v=0oLQKTY5LZg">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Шихо наге</td>
+          <td colspan="2">
+            <a class=two href="https://www.youtube.com/watch?v=Jd1HhbJn3EI">t</a>
+          </td>
+          <td>
+            <a class=five href="https://www.youtube.com/watch?v=2iKjb9DyrRg">t</a>
+          </td>
+          <td colspan="2">
+            <a class=five href="https://www.youtube.com/watch?v=TrU5CG1YXQ0">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=four href="https://www.youtube.com/watch?v=oRFEHYF-3vM">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=crXID7uTK24">t</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=m2sABtxbM_w">t</a>
+          </td>
+          <td>
+            <a class=two href="https://www.youtube.com/watch?v=0jLQGbMEJo4">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a class=four href="https://www.youtube.com/watch?v=aeNlXCk8U_Q">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a class=one href="https://www.youtube.com/watch?v=GaBcKQ4XEfM">hh</a>
+          </td>
+          <td>
+            <a class=four href="https://www.youtube.com/watch?v=csobUjVEufI">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Тэнчин наге</td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=3wwDH0QmKc0">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Кайтен наге</td>
+          <td class="tight">
+            <a class="one" href="https://www.youtube.com/watch?v=8L2FIcYp79k">t (учи)</a>
+          </td>
+          <td class="tight">
+            <a class="one" href="https://www.youtube.com/watch?v=dsZl6CjJ644">t (сото)</a>
+          </td>
+          <td>
+            <a class="five ua" href="youtube">t</a>
+          </td>
+          <td class="tight">
+            <a class="three" href="https://www.youtube.com/watch?v=1VOJYHPCnf0">t (учи)</a>
+          </td>
+          <td class="tight">
+            <a class="two" href="https://www.youtube.com/watch?v=2pSTa5uuoUg">t (сото)</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class="two" href="https://www.youtube.com/watch?v=ongtI3jmSwA">t</a>
+          </td>
+          <td class="tight">
+            <a class="one" href="https://www.youtube.com/watch?v=T8c-_SLjtxg">t (учи)</a>
+          </td>
+          <td class="tight">
+            <a class="one" href="https://www.youtube.com/watch?v=U7Q6T2S4JOk">t (сото)</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="tight">
+            <a class="one" href="https://www.youtube.com/watch?v=zrhlbJeFYOs">hh (учи) </a>
+          </td>
+          <td class="tight">
+            <a class="one" href="https://www.youtube.com/watch?v=nMJG87_GIrI">hh (сото) </a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3">Кокю хо</td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td colspan="2">
+            <a class=three href="https://www.youtube.com/watch?v=c8iHaT7zzHI">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td>
+            <a class=three href="https://www.youtube.com/watch?v=Im2HzWEZD74">t</a>
+          </td>
+          <td>
+            <a href="youtube">t</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">t</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a class=five href="https://www.youtube.com/watch?v=otmLsetAf8w">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td>
+            <a href="youtube">s</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">s</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td>
+            <a href="youtube">hh</a>
+          </td>
+          <td colspan="2">
+            <a href="youtube">hh</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      var videoLessons = document.querySelectorAll('#myTable td a');
+      videoLessons.forEach(function(lesson) {
+        var isFive = lesson.classList.contains('five');
+        var isFour = lesson.classList.contains('four');
+        var isThree = lesson.classList.contains('three');
+        var isTwo = lesson.classList.contains('two');
+        var isOne = lesson.classList.contains('one');
+        if (!isFour && !isFive && !isThree && !isTwo && !isOne) {
+          lesson.parentNode.classList.add('always-hidden');
+        }
+      });
+      document.getElementById('five_box').addEventListener('change', function() {
+        var videoLessons = document.querySelectorAll('#myTable td a');
+        videoLessons.forEach(function(lesson) {
+          var isFive = lesson.classList.contains('five');
+          lesson.parentNode.classList.toggle('hidden', document.getElementById('five_box').checked && !isFive);
+        });
+      });
+      document.getElementById('four_box').addEventListener('change', function() {
+        var videoLessons = document.querySelectorAll('#myTable td a');
+        videoLessons.forEach(function(lesson) {
+          var isFive = lesson.classList.contains('five');
+          var isFour = lesson.classList.contains('four');
+          lesson.parentNode.classList.toggle('hidden', document.getElementById('four_box').checked && !isFour && !isFive);
+        });
+      });
+      document.getElementById('three_box').addEventListener('change', function() {
+        var videoLessons = document.querySelectorAll('#myTable td a');
+        videoLessons.forEach(function(lesson) {
+          var isFive = lesson.classList.contains('five');
+          var isFour = lesson.classList.contains('four');
+          var isThree = lesson.classList.contains('three');
+          lesson.parentNode.classList.toggle('hidden', document.getElementById('three_box').checked && !isFour && !isFive && !isThree);
+        });
+      });
+      document.getElementById('two_box').addEventListener('change', function() {
+        var videoLessons = document.querySelectorAll('#myTable td a');
+        videoLessons.forEach(function(lesson) {
+          var isFive = lesson.classList.contains('five');
+          var isFour = lesson.classList.contains('four');
+          var isThree = lesson.classList.contains('three');
+          var isTwo = lesson.classList.contains('two');
+          lesson.parentNode.classList.toggle('hidden', document.getElementById('two_box').checked && !isFour && !isFive && !isThree && !isTwo);
+        });
+      });
+      document.getElementById('one_box').addEventListener('change', function() {
+        var videoLessons = document.querySelectorAll('#myTable td a');
+        videoLessons.forEach(function(lesson) {
+          var isFive = lesson.classList.contains('five');
+          var isFour = lesson.classList.contains('four');
+          var isThree = lesson.classList.contains('three');
+          var isTwo = lesson.classList.contains('two');
+          var isOne = lesson.classList.contains('one');
+          lesson.parentNode.classList.toggle('hidden', document.getElementById('one_box').checked && !isFour && !isFive && !isThree && !isTwo && !isOne);
+        });
+      });
+    </script>
   </body>
 </html>
