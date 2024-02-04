@@ -3,193 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таблица с фильтром</title>
-    <style>
-      table {
-        border: 1px solid #c0c0c0;
-      }
-
-      .outerbox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      tr {
-        padding: 0px;
-      }
-
-      td {
-        height: 100%;
-        padding: 0px;
-        overflow: hidden
-      }
-
-      td a {
-        margin: -1em;
-        padding: 1em;
-        display: block;
-      }
-
-      td a.five:hover {
-        background-color: rgba(255, 0, 0, 0.5);
-      }
-
-      a.five {
-        background-color: rgba(255, 0, 0, 0.3);
-      }
-
-      td a.four:hover {
-        background-color: rgba(11, 156, 49, 0.6);
-      }
-
-      a.four {
-        background-color: rgba(11, 156, 49, 0.4);
-      }
-
-      td a.three:hover {
-        background-color: rgba(41, 58, 147, 0.9);
-      }
-
-      a.three {
-        background-color: rgba(41, 58, 147, 0.6);
-      }
-
-      td a.two:hover {
-        background-color: rgba(139, 69, 19, 0.9);
-      }
-
-      a.two {
-        background-color: rgba(139, 69, 19, 0.6);
-      }
-
-      td a.one:hover {
-        background-color: rgba(83, 42, 13, 0.9);
-      }
-
-      a.one {
-        background-color: rgba(83, 42, 13, 0.7);
-      }
-
-      td,
-      th {
-        width: 140px;
-        border: 1px solid #c0c0c0;
-        padding: 8px;
-      }
-
-      a {
-        text-align: center;
-      }
-
-      a:link {
-        color: #40404F;
-        text-decoration: none;
-      }
-
-      a:visited {
-        color: #40404F;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: #40404F;
-        text-decoration: none;
-      }
-
-      a:active {
-        color: #40404F;
-        text-decoration: none;
-      }
-
-      .always-hidden {
-        visibility: hidden;
-      }
-
-      .hidden {
-        visibility: hidden;
-      }
-
-      .hidden-always {
-        visibility: hidden;
-      }
-
-      a.ua,
-      a.ua:hover {
-        opacity: 0.5;
-        pointer-events: none;
-      }
-
-      .tight {
-        width: 55px;
-      }
-
-      .radio-inputs {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 0.5rem;
-        background-color: #EEE;
-        box-sizing: border-box;
-        box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-        padding-bottom: 0.25rem;
-        font-size: 14px;
-      }
-
-      .radio-inputs .radio {
-        border: 1px solid #c0c0c0;
-        padding: 8px;
-        flex: 1 1 auto;
-        text-align: center;
-        width: 300px;
-        margin: 0.5px;
-      }
-
-      .radio-inputs .radio input {
-        display: none;
-      }
-
-      .radio-inputs .radio .name {
-        display: flex;
-        cursor: pointer;
-        align-items: center;
-        justify-content: space-around;
-        border: none;
-        padding: .5rem 0;
-        color: rgba(51, 65, 85, 1);
-        transition: all .15s ease-in-out;
-      }
-
-      .radio-inputs .radio input:checked+.name {
-        font-weight: 600;
-      }
-    </style>
+    <title>Программа айкидо</title>
+	<link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class=outerbox>
       <div class="radio-inputs">
-        <label class="radio">
+        <label class="radio five">
           <input type="radio" id="five_box" name="radio">
           <span class="name">5 КЮ</span>
         </label>
-        <label class="radio">
+        <label class="radio four">
           <input type="radio" id="four_box" name="radio">
           <span class="name">4 КЮ</span>
         </label>
-        <label class="radio">
+        <label class="radio three">
           <input id="three_box" type="radio" name="radio">
           <span class="name">3 КЮ</span>
         </label>
-        <label class="radio">
+        <label class="radio two">
           <input id="two_box" type="radio" name="radio">
           <span class="name">2 КЮ</span>
         </label>
-        <label class="radio">
+        <label class="radio one">
           <input id="one_box" type="radio" name="radio" checked="">
           <span class="name">1 КЮ</span>
         </label>
       </div>
-      <table id="myTable">
+      <table id="aikido_exam">
         <thead>
           <tr>
             <th></th>
@@ -999,19 +840,19 @@
         <tr>
           <td rowspan="3">Кайтен наге</td>
           <td class="tight">
-            <a class="one" href="https://www.youtube.com/watch?v=8L2FIcYp79k">t (учи)</a>
+            <a class="one" href="https://www.youtube.com/watch?v=8L2FIcYp79k">t учи</a>
           </td>
           <td class="tight">
-            <a class="one" href="https://www.youtube.com/watch?v=dsZl6CjJ644">t (сото)</a>
+            <a class="one" href="https://www.youtube.com/watch?v=dsZl6CjJ644">t сото</a>
           </td>
           <td>
             <a class="five ua" href="youtube">t</a>
           </td>
           <td class="tight">
-            <a class="three" href="https://www.youtube.com/watch?v=1VOJYHPCnf0">t (учи)</a>
+            <a class="three" href="https://www.youtube.com/watch?v=1VOJYHPCnf0">t учи</a>
           </td>
           <td class="tight">
-            <a class="two" href="https://www.youtube.com/watch?v=2pSTa5uuoUg">t (сото)</a>
+            <a class="two" href="https://www.youtube.com/watch?v=2pSTa5uuoUg">t сото</a>
           </td>
           <td>
             <a href="youtube">t</a>
@@ -1029,10 +870,10 @@
             <a class="two" href="https://www.youtube.com/watch?v=ongtI3jmSwA">t</a>
           </td>
           <td class="tight">
-            <a class="one" href="https://www.youtube.com/watch?v=T8c-_SLjtxg">t (учи)</a>
+            <a class="one" href="https://www.youtube.com/watch?v=T8c-_SLjtxg">t учи</a>
           </td>
           <td class="tight">
-            <a class="one" href="https://www.youtube.com/watch?v=U7Q6T2S4JOk">t (сото)</a>
+            <a class="one" href="https://www.youtube.com/watch?v=U7Q6T2S4JOk">t сото</a>
           </td>
         </tr>
         <tr>
@@ -1066,10 +907,10 @@
         </tr>
         <tr>
           <td class="tight">
-            <a class="one" href="https://www.youtube.com/watch?v=zrhlbJeFYOs">hh (учи) </a>
+            <a class="one" href="https://www.youtube.com/watch?v=zrhlbJeFYOs">hh учи</a>
           </td>
           <td class="tight">
-            <a class="one" href="https://www.youtube.com/watch?v=nMJG87_GIrI">hh (сото) </a>
+            <a class="one" href="https://www.youtube.com/watch?v=nMJG87_GIrI">hh сото</a>
           </td>
           <td>
             <a href="youtube">hh</a>
@@ -1186,63 +1027,7 @@
         </tr>
       </table>
     </div>
-    <script>
-      var videoLessons = document.querySelectorAll('#myTable td a');
-      videoLessons.forEach(function(lesson) {
-        var isFive = lesson.classList.contains('five');
-        var isFour = lesson.classList.contains('four');
-        var isThree = lesson.classList.contains('three');
-        var isTwo = lesson.classList.contains('two');
-        var isOne = lesson.classList.contains('one');
-        if (!isFour && !isFive && !isThree && !isTwo && !isOne) {
-          lesson.parentNode.classList.add('always-hidden');
-        }
-      });
-      document.getElementById('five_box').addEventListener('change', function() {
-        var videoLessons = document.querySelectorAll('#myTable td a');
-        videoLessons.forEach(function(lesson) {
-          var isFive = lesson.classList.contains('five');
-          lesson.parentNode.classList.toggle('hidden', document.getElementById('five_box').checked && !isFive);
-        });
-      });
-      document.getElementById('four_box').addEventListener('change', function() {
-        var videoLessons = document.querySelectorAll('#myTable td a');
-        videoLessons.forEach(function(lesson) {
-          var isFive = lesson.classList.contains('five');
-          var isFour = lesson.classList.contains('four');
-          lesson.parentNode.classList.toggle('hidden', document.getElementById('four_box').checked && !isFour && !isFive);
-        });
-      });
-      document.getElementById('three_box').addEventListener('change', function() {
-        var videoLessons = document.querySelectorAll('#myTable td a');
-        videoLessons.forEach(function(lesson) {
-          var isFive = lesson.classList.contains('five');
-          var isFour = lesson.classList.contains('four');
-          var isThree = lesson.classList.contains('three');
-          lesson.parentNode.classList.toggle('hidden', document.getElementById('three_box').checked && !isFour && !isFive && !isThree);
-        });
-      });
-      document.getElementById('two_box').addEventListener('change', function() {
-        var videoLessons = document.querySelectorAll('#myTable td a');
-        videoLessons.forEach(function(lesson) {
-          var isFive = lesson.classList.contains('five');
-          var isFour = lesson.classList.contains('four');
-          var isThree = lesson.classList.contains('three');
-          var isTwo = lesson.classList.contains('two');
-          lesson.parentNode.classList.toggle('hidden', document.getElementById('two_box').checked && !isFour && !isFive && !isThree && !isTwo);
-        });
-      });
-      document.getElementById('one_box').addEventListener('change', function() {
-        var videoLessons = document.querySelectorAll('#myTable td a');
-        videoLessons.forEach(function(lesson) {
-          var isFive = lesson.classList.contains('five');
-          var isFour = lesson.classList.contains('four');
-          var isThree = lesson.classList.contains('three');
-          var isTwo = lesson.classList.contains('two');
-          var isOne = lesson.classList.contains('one');
-          lesson.parentNode.classList.toggle('hidden', document.getElementById('one_box').checked && !isFour && !isFive && !isThree && !isTwo && !isOne);
-        });
-      });
-    </script>
+
+	<script type="text/javascript" src="script.js"></script>
   </body>
 </html>
