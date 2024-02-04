@@ -1,0 +1,154 @@
+  table {
+	border: 1px solid #c0c0c0;
+  }
+
+  .outerbox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  tr {
+	padding: 0px;
+  }
+
+  td {
+	height: 100%;
+	padding: 0px;
+	overflow: hidden
+  }
+
+  td a {
+	margin: -1em;
+	padding: 1em;
+	display: block;
+  }
+
+  .five:hover {
+	background-color: rgba(255, 0, 0, 0.5);
+  }
+
+  .five {
+	background-color: rgba(255, 0, 0, 0.3);
+  }
+
+  .four:hover {
+	background-color: rgba(11, 156, 49, 0.6);
+  }
+
+  .four {
+	background-color: rgba(11, 156, 49, 0.4);
+  }
+
+  .three:hover {
+	background-color: rgba(41, 58, 147, 0.9);
+  }
+
+  .three {
+	background-color: rgba(41, 58, 147, 0.6);
+  }
+
+  .two:hover {
+	background-color: rgba(139, 69, 19, 0.9);
+  }
+
+  .two {
+	background-color: rgba(139, 69, 19, 0.6);
+  }
+
+  .one:hover {
+	background-color: rgba(83, 42, 13, 0.9);
+  }
+
+  .one {
+	background-color: rgba(83, 42, 13, 0.7);
+  }
+
+  td,
+  th {
+	width: 140px;
+	border: 1px solid #c0c0c0;
+	padding: 8px;
+  }
+
+  a {
+	text-align: center;
+  }
+
+  a:link {
+	color: #40404F;
+	text-decoration: none;
+  }
+
+  a:visited {
+	color: #40404F;
+	text-decoration: none;
+  }
+
+  a:hover {
+	color: #40404F;
+	text-decoration: none;
+  }
+
+  a:active {
+	color: #40404F;
+	text-decoration: none;
+  }
+
+  .hidden {
+	visibility: hidden;
+  }
+
+  .always-hidden {
+	visibility: hidden;
+  }
+
+  a.ua,
+  a.ua:hover {
+	opacity: 0.5;
+	pointer-events: none;
+  }
+
+  .tight {
+	width: 55px;
+  }
+
+  .radio-inputs {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 0.5rem;
+	background-color: #EEE;
+	box-sizing: border-box;
+	box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+	padding-bottom: 0.25rem;
+	font-size: 14px;
+  }
+
+  .radio-inputs .radio {
+	border: 1px solid #c0c0c0;
+	padding: 9px;
+	flex: 1 1 auto;
+	text-align: center;
+	width: 300px;
+	margin: 0.5px;
+  }
+
+  .radio-inputs .radio input {
+	display: none;
+  }
+
+  .radio-inputs .radio .name {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: space-around;
+	border: none;
+	padding: .5rem 0;
+	color: rgba(51, 65, 85, 1);
+	transition: all .15s ease-in-out;
+  }
+
+  .radio-inputs .radio input:checked+.name {
+	font-weight: 600;
+  }
